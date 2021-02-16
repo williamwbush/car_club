@@ -1,12 +1,61 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Home, Profile } from './components';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Navbar, Nav } from 'react-bootstrap';
+import logo from './assets/img/chicago-car-club.png';
+import './styles.css'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+}
+from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+		<Router>
+      <Navbar bg='dark' variant='dark'>
+        <Navbar.Brand>
+          <img
+            alt="Car Club Members Area"
+            src={logo}
+            width="30"
+            className="d-inline-block align-top"
+          />{' '}
+          <Link to="/">Car Club Members Area</Link>
+        </Navbar.Brand>
+      <Nav className="move-nav" activeKey="/">
+        
+        <Nav.Item>
+          <Nav.Link>
+            <Link to='/'> Home </Link>
+          </Nav.Link>
+        </Nav.Item>
+
+        <Nav.Item>
+          <Nav.Link>
+            <Link to='/profile'> Profile </Link>
+          </Nav.Link>
+        </Nav.Item>
+      
+      </Nav>
+
+      </Navbar>
+
+			<Switch>
+        <Route exact path="/">
+          <Home title="Welcome!"/>
+        </Route>
+        <Route path="/profile">
+          <Profile title="Here are your profile details:" />
+        </Route>
+      </Switch>
+
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 );
