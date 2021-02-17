@@ -35,7 +35,7 @@ export const server_calls = {
         const response = await fetch(`/cars/${id}`, {
             method: 'POST', // PUT also works here
             headers: {
-                'Content-Type:': 'application/json',
+                'Content-Type': 'application/json',
                 'x-access-token': `Bearer ${token}`
             },
             body: JSON.stringify(data)
@@ -50,7 +50,7 @@ export const server_calls = {
         const response = await fetch(`/cars`,{
             method: 'POST',
             headers: {
-                'Content-Type:': 'application/json',
+                'Content-Type': 'application/json',
                 'x-access-token': `Bearer ${token}`
             },
             body: JSON.stringify(data)
