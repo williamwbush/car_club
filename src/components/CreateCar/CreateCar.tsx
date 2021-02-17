@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Profile = (props:any) => {
+export const CreateCar = (props:any) => {
     return (
         <div>
-            <h1>Profile</h1>
+            <h1>Add a Car</h1>
             <h4> { props.title }</h4>
         </div>
     )

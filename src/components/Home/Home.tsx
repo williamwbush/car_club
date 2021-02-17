@@ -1,7 +1,11 @@
 import React from 'react';
 // TODO: Add Bootstrap here
 
-export const Home = (props:any) => {
+interface Props{
+    title: string;
+}
+
+export const Home = (props:Props) => {
     // return needed for valid react code
     return (
         <div>

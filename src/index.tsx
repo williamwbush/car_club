@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { Home, Profile } from './components';
+import { Home, CreateCar, Cars } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar, Nav } from 'react-bootstrap';
 import logo from './assets/img/chicago-car-club.png';
@@ -38,7 +38,7 @@ ReactDOM.render(
 
         <Nav.Item>
           <Nav.Link>
-            <Link to='/profile'> Profile </Link>
+            <Link to='/Cars'> Display Your Cars </Link>
           </Nav.Link>
         </Nav.Item>
       
@@ -50,8 +50,11 @@ ReactDOM.render(
         <Route exact path="/">
           <Home title="Welcome!"/>
         </Route>
-        <Route path="/profile">
-          <Profile title="Here are your profile details:" />
+        <Route path="/CreateCar">
+          <CreateCar title="Create a Car:" />
+        </Route>
+        <Route path="/Cars">
+          <Cars />
         </Route>
       </Switch>
 
