@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import { Home, CreateCar, Cars } from './components';
+import { Home, CreateCar, Cars, UpdateCar } from './components';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button, Navbar, Nav } from 'react-bootstrap';
 import logo from './assets/img/chicago-car-club.png';
@@ -55,6 +55,9 @@ ReactDOM.render(
         </Route>
         <Route path="/Cars">
           <Cars />
+        </Route>
+        <Route path="/update">
+          <UpdateCar />
         </Route>
       </Switch>
 
